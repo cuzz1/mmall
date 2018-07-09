@@ -1,0 +1,13 @@
+*.class
+
+# package file
+*.war
+
+# maven ignore
+target/
+
+# idea
+.idea/
+
+# temp file
+*.log

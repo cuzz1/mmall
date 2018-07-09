@@ -1,0 +1,11 @@
+*.class
+
+# package file
+*.war
+
+# maven ignore
+target/
+
+# idea
+.idea/
+*.iml
