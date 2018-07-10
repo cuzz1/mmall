@@ -41,7 +41,7 @@ public class ServiceResponse<T> implements Serializable{
         return status;
     }
 
-    public T getDate() {
+    public T getData() {
         return data;
     }
 
