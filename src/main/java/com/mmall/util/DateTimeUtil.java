@@ -7,9 +7,7 @@ import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Date;
 
-/**
- * Created by geely
- */
+
 public class DateTimeUtil {
 
     //joda-time
