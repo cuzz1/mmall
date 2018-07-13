@@ -188,7 +188,6 @@
     SELECT
     <include refid="Base_Column_List"/>
     FROM mmall_product
---      where把第一个连接and的标签替换成where
     <where>
       <if test="productName != null">
         AND name LIKE #{productName}
@@ -199,5 +198,23 @@
     </where>
 
   </select>
+  
+  <select id="selectByNameAndCategoryIds" resultMap="BaseResultMap" parameterType="map">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM mmall_product
+    WHERE status = 1
+    <if test="productName != null" >
+      AND name LIKE #{productName}
+    </if>
+    <if test="categoryIdlist != null">
+      AND category_id IN
+      <foreach item="item" index="index" open="(" separator="," close=")" collection="categoryIdlist">
+        #{item}
+      </foreach>
+    </if>
+
+  </select>
+
 
 </mapper>
