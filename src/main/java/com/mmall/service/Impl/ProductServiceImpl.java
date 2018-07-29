@@ -108,7 +108,7 @@ public class ProductServiceImpl implements IProductService{
         productDetailVo.setStock(product.getStock());
         // TODO 添加默认地址
         // imageHost
-        productDetailVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix", ""));
+        productDetailVo.setImageHost(PropertiesUtil.getProperty("imageHost", ""));
         // parentCategoryId
         Category category = categoryMapper.selectByPrimaryKey(product.getCategoryId());
         if (category == null) {
@@ -147,7 +147,7 @@ public class ProductServiceImpl implements IProductService{
         productListVo.setName(product.getName());
         productListVo.setCategoryId(product.getCategoryId());
         productListVo.setMainImage(product.getMainImage());
-        productListVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix", ""));
+        productListVo.setImageHost(PropertiesUtil.getProperty("imageHost", ""));
         productListVo.setPrice(product.getPrice());
         productListVo.setSubtitle(product.getSubtitle());
         productListVo.setStatus(product.getStatus());
